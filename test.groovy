@@ -1,6 +1,6 @@
 node("any") {
     deleteDir()
-    final String bitbucketCredentialId = "Gigimon"
+    final String bitbucketCredentialId = "github"
     final String workDir = pwd()
     String nexusType, urlBitbucketRepository
     git(
