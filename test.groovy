@@ -1,9 +1,22 @@
 pipeline {
     agent any
     deleteDir()
-    git(
-            branch: "master",
-            credentialsId: "github",
-            url: "https://github.com/Mugadina/Repo.git"
-    )
+    stages {
+    	stage ("test") {
+	    steps{
+	    	git(
+            	   branch: "master",
+            	   credentialsId: "github",
+            	   url: "https://github.com/Mugadina/Repo.git"
+               )
+	    
+	    
+	    
+	    }
+    	
+    	
+    	}	
+    
+    }
+    
 }    
