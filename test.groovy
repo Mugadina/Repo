@@ -1,4 +1,5 @@
-node("any") {
+pipeline {
+    agent any
     deleteDir()
     final String bitbucketCredentialId = "github"
     final String workDir = pwd()
