@@ -6,6 +6,6 @@ node("any") {
     git(
             branch: "master",
             credentialsId: "${bitbucketCredentialId}",
-            url: https://github.com/Mugadina/Repo.git
+            url: "https://github.com/Mugadina/Repo.git"
     )
 }    
