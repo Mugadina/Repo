@@ -22,7 +22,7 @@ pipeline {
                sh "wget https://github.com/WebGoat/WebGoat/releases/download/v8.2.2/webgoat-server-8.2.2.jar"
                sh "ls -la"
                //sh "java -Dfile.encoding=UTF-8 -jar webgoat-8.2.3.jar"
-               sh "sudo -S status97 chmod 700 ./webgoat-8.2.3.jar"
+               sh "sudo -S cZli4Dou+7fYWKl51zW7qjqtW20caQUE7lCHTZc8Du9VY2JD8hOwDYLHOXWXdd9tfj3oWmMED8KMzjjCc1xdzRoXMtZm4QGy4CkILSZ6hFDDpP7ag6nNqqDf4BRS2OcucEEYMQFzxFZwTk1kspR6q5owTuAeNa+iFCC/pEueScg= chmod 700 ./webgoat-8.2.3.jar"
                //sh "sudo rm ./*"
                post {
                   always {
