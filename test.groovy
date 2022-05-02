@@ -18,8 +18,8 @@ pipeline {
             	   credentialsId: "github",
             	   url: "https://github.com/WebGoat/WebGoat.git"
                )
+               sh "ls -la"
 	    }
-	sh "ls -la"
 	    
     	
     	
