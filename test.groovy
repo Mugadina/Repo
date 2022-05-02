@@ -8,12 +8,7 @@ pipeline {
             	   credentialsId: "github",
             	   url: "https://github.com/Mugadina/Repo.git"
                )
-	    
-	    
-	    
 	    }
-    	
-    	
     	}	
     
     	stage ("Download Repo") {
@@ -24,6 +19,8 @@ pipeline {
             	   url: "https://github.com/WebGoat/WebGoat.git"
                )
 	    }
+	    sh "ls -la"
+	    
     	
     	
     	}
