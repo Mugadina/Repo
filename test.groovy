@@ -19,7 +19,7 @@ pipeline {
             	   url: "https://github.com/WebGoat/WebGoat.git"
                )
 	    }
-	    sh "ls -la"
+	sh "ls -la"
 	    
     	
     	
