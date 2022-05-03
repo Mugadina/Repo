@@ -43,7 +43,7 @@ pipeline {
                    -Dmaven.test.failure.ignore=true\
                    -Dmaven.test.skip=true"
 	        
-	    	
+	        }	
 	    }
 	    
 	    
