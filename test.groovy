@@ -20,7 +20,7 @@ pipeline {
                )
                //sh  "ls -la"
                //sh "wget https://github.com/WebGoat/WebGoat/releases/download/v8.2.2/webgoat-server-8.2.2.jar"
-               sh  "./mvnw clean install"
+               sh  "./mvnw clean install -e"
                sh "ls -la"
                //sh "java -Dfile.encoding=UTF-8 -jar webgoat-8.2.3.jar"
                //sh "echo status97 | sudo -S command chmod 700 ./webgoat-8.2.3.jar"
