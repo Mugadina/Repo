@@ -35,7 +35,7 @@ pipeline {
     	}
     	
     	stage ("Test SonarQube") {
-    	    withSonarQubeEnv(credentialsId: sonar_login: "d05c2de052a74c77850cc000e398006361f324e2") {
+    	    withSonarQubeEnv(sonar_login: "d05c2de052a74c77850cc000e398006361f324e2") {
                 script {
                     withMaven() {
                         sh "mvn clean install"
