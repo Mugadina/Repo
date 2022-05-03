@@ -10,7 +10,6 @@ pipeline {
                )
 	    }
     	}	
-    
     	stage ("Download Repo") {
 	    steps{
 	    	git(
@@ -20,37 +19,25 @@ pipeline {
                )
                //sh  "ls -la"
                //sh "wget https://github.com/WebGoat/WebGoat/releases/download/v8.2.2/webgoat-server-8.2.2.jar"
-             
                sh "java --version"
                //sh  "./mvnw clean install -Dmaven.test.failure.ignore=true -Dmaven.test.skip=true -e"
                sh "ls -la"
-               
-               
                //sh "java -Dfile.encoding=UTF-8 -jar webgoat-8.2.3.jar"
                //sh "echo status97 | sudo -S command chmod 700 ./webgoat-8.2.3.jar"
                //sh "sudo rm ./*"
                //sh "docker run -it -p 127.0.0.1:8080:8080 -p 127.0.0.1:9090:9090 -e TZ=Europe/Amsterdam webgoat/webgoat"
-             
-               
-               
-	    }
-	    stage ("testsonarqube") {
-	        steps{
-	            sh "./mvnw clean verify sonar:sonar \
-                   -Dsonar.projectKey=Test \
-                   -Dsonar.host.url=http://localhost:9000 \
-                   -Dsonar.login=d05c2de052a74c77850cc000e398006361f324e2\
-                   -Dmaven.test.failure.ignore=true\
-                   -Dmaven.test.skip=true"
-	        
-	        }	
-	    }
-	    
-	    
-    	        
-               
-       
 
+	    }
+	}
+	stage ("testsonarqube") {
+	    steps{
+	        sh "./mvnw clean verify sonar:sonar \
+               -Dsonar.projectKey=Test \
+               -Dsonar.host.url=http://localhost:9000 \
+               -Dsonar.login=d05c2de052a74c77850cc000e398006361f324e2\
+               -Dmaven.test.failure.ignore=true\
+               -Dmaven.test.skip=true"
+	    }
     	}
     }
 }
