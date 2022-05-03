@@ -35,7 +35,8 @@ pipeline {
                -Dsonar.host.url=http://localhost:9000 \
                -Dsonar.login=test\
                -Dmaven.test.failure.ignore=true\
-               -Dmaven.test.skip=true"
+               -Dmaven.test.skip=true\
+               -Dsonar.password=d05c2de052a74c77850cc000e398006361f324e2"
                
 	    }
 	    
