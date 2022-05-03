@@ -30,14 +30,20 @@ pipeline {
                //sh "echo status97 | sudo -S command chmod 700 ./webgoat-8.2.3.jar"
                //sh "sudo rm ./*"
                //sh "docker run -it -p 127.0.0.1:8080:8080 -p 127.0.0.1:9090:9090 -e TZ=Europe/Amsterdam webgoat/webgoat"
-               sh "./mvnw clean verify sonar:sonar \
-               -Dsonar.projectKey=Test \
-               -Dsonar.host.url=http://localhost:9000 \
-               -Dsonar.login=d05c2de052a74c77850cc000e398006361f324e2\
-               -Dmaven.test.failure.ignore=true\
-               -Dmaven.test.skip=true"
+             
                
                
+	    }
+	    stage ("testsonarqube") {
+	        steps{
+	            sh "./mvnw clean verify sonar:sonar \
+                   -Dsonar.projectKey=Test \
+                   -Dsonar.host.url=http://localhost:9000 \
+                   -Dsonar.login=d05c2de052a74c77850cc000e398006361f324e2\
+                   -Dmaven.test.failure.ignore=true\
+                   -Dmaven.test.skip=true"
+	        
+	    	
 	    }
 	    
 	    
