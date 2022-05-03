@@ -35,14 +35,10 @@ pipeline {
     	}
     	
     	stage ("Test SonarQube") {
-    	    withSonarQubeEnv(sonar_login: "d05c2de052a74c77850cc000e398006361f324e2") {
-                script {
-                    withMaven() {
-                        sh "mvn clean install"
-                        sh "mvn  sonar:sonar"
-                    }
-                }
-            }
+    	    sh "mvn clean verify sonar:sonar \
+           -Dsonar.projectKey=Test \
+           -Dsonar.host.url=http://localhost:9000 \
+           -Dsonar.login=test"
     	
     	
     	}
