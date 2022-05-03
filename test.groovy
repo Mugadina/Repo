@@ -33,7 +33,10 @@ pipeline {
                sh "./mvnw clean verify sonar:sonar \
                -Dsonar.projectKey=Test \
                -Dsonar.host.url=http://localhost:9000 \
-               -Dsonar.login=test"
+               -Dsonar.login=test\
+               -Dmaven.test.failure.ignore=true\
+               -Dmaven.test.skip=true"
+               
 	    }
 	    
 	    
