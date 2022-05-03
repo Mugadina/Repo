@@ -14,7 +14,7 @@ pipeline {
     	stage ("Download Repo") {
 	    steps{
 	    	git(
-            	   branch: "release/v8.2.2",
+            	   branch: "develop",
             	   credentialsId: "github",
             	   url: "https://github.com/WebGoat/WebGoat.git"
                )
