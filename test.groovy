@@ -34,11 +34,11 @@ pipeline {
 
     	}
     	
-    	stage ("Test SonarQube") {
-    	    sh "mvn clean verify sonar:sonar \
-           -Dsonar.projectKey=Test \
-           -Dsonar.host.url=http://localhost:9000 \
-           -Dsonar.login=test"
+    	    steps ("Test SonarQube") {
+    	        sh "mvn clean verify sonar:sonar \
+               -Dsonar.projectKey=Test \
+               -Dsonar.host.url=http://localhost:9000 \
+               -Dsonar.login=test"
     	
     	
     	}
