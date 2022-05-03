@@ -16,7 +16,7 @@ pipeline {
 	    	git(
             	   branch: "develop",
             	   credentialsId: "github",
-            	   url: "git@github.com:WebGoat/WebGoat.git"
+            	   url: "https://github.com/WebGoat/WebGoat.git"
                )
                //sh  "ls -la"
                //sh "wget https://github.com/WebGoat/WebGoat/releases/download/v8.2.2/webgoat-server-8.2.2.jar"
